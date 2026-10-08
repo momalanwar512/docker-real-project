@@ -1,10 +1,14 @@
-name: My First Workflow
+name: Docker Build
 
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print a message
-        run: echo "Hello! My GitHub Actions workflow is working."
+      - name: Get project files
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t real-web-app .
