@@ -22,4 +22,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: YOUR_DOCKERHUB_USERNAME/real-web-app:latest
+          tags: momalanwar18/real-web-app:latest
